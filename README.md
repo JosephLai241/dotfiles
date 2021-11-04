@@ -1,6 +1,6 @@
 # dotfiles
 
-This repository contains some of my dotfiles. This is a living repository and will be updated as my needs/preferences change.
+This repository contains some of my dotfiles and mirrors my `.config` directory. It is a living repository and will be updated as my needs/preferences change.
 
 # Overview
 
