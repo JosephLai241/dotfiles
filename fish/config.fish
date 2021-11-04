@@ -28,12 +28,6 @@ alias blogstats="python blog_stats.py"
 ######
 
 # Add Rust.
-fish_add_path /home/joseph/.cargo/bin
-fish_add_path /home/joseph/.rustup
-# Add Go.
-fish_add_path /usr/local/go/bin
-
-
-# Run starship.
-starship init fish | source
+fish_add_path /Users/josephlai/.cargo/bin
+fish_add_path /Users/josephlai/.rustup
 
