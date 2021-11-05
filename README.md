@@ -7,16 +7,35 @@ This repository primarily mirrors my `.config/` directory. The sub-directories t
 * `tmux/`
 * `vim/`
 
-# Overview
+# Repository Tree
 
-Here's a list of the included dotfiles:
+```
+dotfiles/
+├── alacritty
+│   └── alacritty.yml
+├── fish
+│   └── config.fish
+├── leftwm
+│   └── config.toml
+├── nvim
+│   ├── ftplugin
+│   │   └── rust.vim
+│   └── init.vim
+├── tmux
+│   └── .tmux.conf
+└── vim
+    └── .vimrc
+```
 
-* `alacritty/alacritty.yml` - [Alacritty][Alacritty] terminal emulator configuration.
-* `fish/config.fish` - [Fish][Fish] (shell) configuration.
-* `leftwm/config.toml` - [LeftWM][LeftWM] tiling window manager configuration.
-* `nvim/init.vim` - [Neovim][Neovim] configuration.
-* `tmux/.tmux.conf` - [Tmux][Tmux] configuration.
-* `vim/.vimrc` - [Vim][Vim] configuration.
+# Links
+
+* [Alacritty][Alacritty]
+* [Fish][Fish]
+* [LeftWM][LeftWM]
+* [Neovim][Neovim]
+* [Tmux][Tmux]
+* [Vim][Vim]
+
 
 <!-- LINKS -->
 [Alacritty]: https://github.com/alacritty/alacritty
