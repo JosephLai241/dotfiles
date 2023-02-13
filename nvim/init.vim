@@ -29,6 +29,8 @@ set hlsearch
 set ignorecase
 " Display matches for a search pattern while you type.
 set incsearch
+" Disable the mouse.
+set mouse=
 " Disable error bells.
 set noerrorbells
 " Display line numbers.
@@ -62,7 +64,7 @@ set termguicolors
 syntax on
 " Turn on filetype detection, using filetype plugin and indent files.
 "	plugin - enable loading the plugin files for specific file types.
-"		This may be done by creating a configuration file for a file type, 
+"		This may be done by creating a configuration file for a file type,
 "		ie. "~/.config/nvim/ftplugin/rust.vim" for Rust file types.
 "	indent - enable loading the indent file for specific file types.
 filetype plugin indent on
@@ -73,26 +75,19 @@ filetype plugin indent on
 " -------------------------
 "
 call plug#begin('~/.local/share/nvim/plugged')
-" The best theme.
-Plug 'ayu-theme/ayu-vim'
 " Python Black formatter.
 Plug 'psf/black', { 'branch': 'stable' }
 " MUST HAVE FOR DEVELOPMENT - Load language servers, code completion, etc.
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Visualize hex code colors directly in Vim. Useful for frontend development.
 Plug 'chrisbra/Colorizer'
-" Edge theme
-Plug 'sainnhe/edge'
 " Emmet for Vim - For expanding abbreviations.
 Plug 'mattn/emmet-vim'
 " fzf - Fuzzy finder.
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-" Another great theme.
+" The best theme.
 Plug 'morhetz/gruvbox'
-Plug 'sainnhe/gruvbox-material'
-" Hybrid theme.
-Plug 'w0ng/vim-hybrid'
 " Add indent line indicators.
 Plug 'lukas-reineke/indent-blankline.nvim'
 " A Markdown preview plugin.
@@ -105,12 +100,15 @@ Plug 'preservim/nerdcommenter'
 Plug 'preservim/nerdtree'
 " Git integration for NERDTree.
 Plug 'Xuyuanp/nerdtree-git-plugin'
-" A syntax highlighting and Git status indicator for NERDTree.
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-" Papercolor theme.
-Plug 'NLKNguyen/papercolor-theme'
+" A syntax highlighting and Git status indicator for NERDTree. Had to use the
+" fork with the Neovim v0.8.0 patch because the original maintainer doesn't
+" give a fuck anymore.
+Plug 'johnstef99/vim-nerdtree-syntax-highlight'
 " The official Rust Vim plugin - it's only loaded when a Rust file is opened.
 Plug 'rust-lang/rust.vim', { 'for': 'rust' }
+" Treesitter and treesitter-context (sticky function signature).
+Plug 'nvim-treesitter/nvim-treesitter'
+Plug 'nvim-treesitter/nvim-treesitter-context'
 " Unicode character plugin.
 Plug 'chrisbra/unicode.vim'
 " Gotta have a dope and useful status bar.
@@ -158,14 +156,14 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 
 
-" --------------------- 
+" ---------------------
 " Configure keybindings
-" --------------------- 
+" ---------------------
 "
 " <\sv> quickly reloads the `.config/nvim/init.vim` file.
 nnoremap <leader>sv :source $MYVIMRC<CR>
 " <\vr> shortens the vertical resizing command when editing with split panes.
-nnoremap <leader>vr :vertical resize 
+nnoremap <leader>vr :vertical resize
 " <Ctrl-Left> and <Ctrl-Right> are keybindings to cycle between tabs.
 nnoremap <C-Left> :tabprevious<CR>
 nnoremap <C-Right> :tabnext<CR>
@@ -188,7 +186,7 @@ let g:indent_blankline_char = '┊'
 let g:indent_blankline_show_first_indent_level = v:false
 
 " -----------------------------
-" Configure NerdTree Git Plugin 
+" Configure NerdTree Git Plugin
 " -----------------------------
 "
 " Map custom Git status indicators.
@@ -210,7 +208,7 @@ let g:NERDTreeShowHidden=1
 " --------------------
 " Configure coc plugin
 " --------------------
-" 
+"
 " TextEdit might fail if hidden is not set.
 set hidden
 " Some servers have issues with backup files.
@@ -230,12 +228,12 @@ augroup black_on_save
 augroup end
 
 " Use tab for trigger completion with characters ahead and navigate.
-" NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
 " NOTE: There's always complete item selected by default, you may want to enable
 " no select by `"suggest.noselect": true` in your configuration file.
+" NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
 " other plugin before putting this into your config.
 inoremap <silent><expr> <TAB>
-      \ coc#pum#visible() ? coc#pum#next(1):
+      \ coc#pum#visible() ? coc#pum#next(1) :
       \ CheckBackspace() ? "\<Tab>" :
       \ coc#refresh()
 inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
