@@ -4,44 +4,47 @@ This repository contains some of my dotfiles. It is a living repository and will
 
 This repository primarily mirrors my `.config/` directory. The sub-directories that are not present in the `.config/` directory are:
 
-* `tmux/`
-* `vim/`
+- `tmux/`
+- `vim/`
 
 # Repository Tree
 
 ```
 dotfiles/
 ├── alacritty
-│   └── alacritty.yml
+│   └── alacritty.yml
 ├── fish
-│   └── config.fish
+│   └── config.fish
 ├── leftwm
-│   └── config.toml
+│   └── config.toml
 ├── nvim
-│   ├── ftplugin
-│   │   └── rust.vim
-│   └── init.vim
+│   ├── init.lua
+│   └── lua
+│       ├── keybindings.lua
+│       ├── plugins.lua
+│       └── vimcommands.lua
 ├── tmux
-│   └── .tmux.conf
-└── vim
-    └── .vimrc
+│   └── .tmux.conf
+├── vim
+│   └── .vimrc
+└── zsh
+    └── .zshrc
 ```
 
 # Links
 
-* [Alacritty][Alacritty]
-* [Fish][Fish]
-* [LeftWM][LeftWM]
-* [Neovim][Neovim]
-* [Tmux][Tmux]
-* [Vim][Vim]
-
+- [Alacritty][Alacritty]
+- [Fish][Fish]
+- [LeftWM][LeftWM]
+- [Neovim][Neovim]
+- [Tmux][Tmux]
+- [Vim][Vim]
 
 <!-- LINKS -->
+
 [Alacritty]: https://github.com/alacritty/alacritty
 [Fish]: https://fishshell.com/
 [LeftWM]: https://github.com/leftwm/leftwm
 [Neovim]: https://neovim.io/
 [Tmux]: https://github.com/tmux/tmux
 [Vim]: https://www.vim.org/
-
