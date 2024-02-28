@@ -6,6 +6,7 @@ This repository primarily mirrors my `.config/` directory. The sub-directories t
 
 - `tmux/`
 - `vim/`
+- `zsh/`
 
 # Repository Tree
 
