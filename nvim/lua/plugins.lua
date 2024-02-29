@@ -138,7 +138,6 @@ require("lazy").setup({
 				}
 			})
 		end,
-		dependencies = { "nvim-tree/nvim-web-devicons" },
 		lazy = false,
 	},
 
@@ -181,6 +180,27 @@ require("lazy").setup({
 
 	-- `nvim-lint` - Asynchronous linter plugin complimentary to the built-in LSP.
 	"mfussenegger/nvim-lint",
+
+	-- `nvim-tree` - A fast file browser/tree view
+	{
+		"nvim-tree/nvim-tree.lua",
+		config = function()
+			require("nvim-tree").setup({
+				actions = {
+					open_file = {
+						quit_on_open = true
+					}
+				}
+			})
+		end,
+		dependencies = {
+			-- `nvim-web-devicons` -  Lua fork of `vim-web-devicons` for Neovim.
+			"nvim-tree/nvim-web-devicons",
+		},
+		lazy = false,
+		priority = 10000,
+		version = "*"
+	},
 
 	-- `nvim-treesitter` - Code parsing and context.
 	{
