@@ -6,8 +6,8 @@ vim.keymap.set("n", "<leader>F", "<cmd>Format<CR>")
 -- `<leader>L` - Run the `:Lazy` command to bring up the Lazy plugin manager UI.
 vim.keymap.set("n", "<leader>L", "<cmd>Lazy<CR>")
 
+-- `<leader>T` - Run the `:NvimTreeToggle` command to toggle the tree view pane.
+vim.keymap.set("n", "<leader>T", "<cmd>NvimTreeToggle<CR>")
+
 -- `<leader>Z` - Run the `:ZenMode` command to toggle ZenMode.
 vim.keymap.set("n", "<leader>Z", "<cmd>ZenMode<CR>")
-
--- `<C-t>` - Run the `:NERDTreeToggle` command to toggle the tree view pane.
-vim.keymap.set("n", "<C-t>", "<cmd>NERDTreeToggle<CR>")
