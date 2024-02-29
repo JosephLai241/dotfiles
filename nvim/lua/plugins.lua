@@ -166,13 +166,6 @@ require("lazy").setup({
 	-- `nerdcommenter` - Quickly comment out code.
 	"preservim/nerdcommenter",
 
-	-- `nerdtree` - File browser/tree view sidebar.
-	{
-		"preservim/nerdtree",
-		dependencies = { "Xuyuanp/nerdtree-git-plugin" },
-		lazy = false
-	},
-
 	-- `nord` - A goated theme.
 	{
 		"shaunsingh/nord.nvim",
@@ -279,23 +272,7 @@ require("lazy").setup({
 	"tpope/vim-fugitive",
 
 	-- `vim-gitgutter` - Show Git markers in the sign column.
-	{
-		"airblade/vim-gitgutter",
-		config = function()
-			vim.api.nvim_set_var("NERDTreeGitStatusIndicatorMapCustom", {
-				Modified  = "M",
-				Staged    = "A",
-				Untracked = "U",
-				Renamed   = "R",
-				Unmerged  = "═",
-				Deleted   = "D",
-				Dirty     = "!",
-				Ignored   = "I",
-				Clean     = "✔︎",
-				Unknown   = "?",
-			})
-		end
-	},
+	"airblade/vim-gitgutter",
 
 	-- `vim-surround` - Quickly surround text with matching opening/closing characters.
 	"tpope/vim-surround",
