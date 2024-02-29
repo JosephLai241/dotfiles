@@ -300,7 +300,12 @@ require("lazy").setup({
 	-- `Zen Mode` - Distraction-free coding.
 	{
 		"folke/zen-mode.nvim",
-		lazy = false
+		lazy = false,
+		opts = {
+			window = {
+				width = 140
+			}
+		}
 	},
 
 	-- `vim-devicons` - Adds icons to plugins.
