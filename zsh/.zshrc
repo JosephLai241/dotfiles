@@ -173,3 +173,6 @@ export PATH="/Users/josephlai/.local/bin:$PATH"
 
 # Linking libraries installed by Homebrew.
 export LIBRARY_PATH="$LIBRARY_PATH:$(brew --prefix)/lib"
+
+# Adding globally installed Yarn packages to the $PATH.
+export PATH="/Users/josephlai/.yarn/bin:$PATH"
