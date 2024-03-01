@@ -341,12 +341,4 @@ require("lazy").setup({
 			}
 		}
 	},
-
-	-- `vim-devicons` - Adds icons to plugins.
-	-- NOTE: This plugin has to be loaded last.
-	{
-		"ryanoasis/vim-devicons",
-		lazy = false,
-		priority = 100
-	}
 })
