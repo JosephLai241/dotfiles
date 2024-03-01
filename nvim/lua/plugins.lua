@@ -307,10 +307,7 @@ require("lazy").setup({
 			vim.keymap.set("n", "<leader>gb", builtin.git_branches, {})
 			vim.keymap.set("n", "<leader>gs", builtin.git_status, {})
 		end,
-		dependencies = {
-			"nvim-lua/plenary.nvim",
-			"nvim-telescope/telescope-file-browser.nvim",
-		},
+		dependencies = { "nvim-lua/plenary.nvim" },
 		lazy = false
 	},
 
