@@ -7,8 +7,8 @@ if not vim.loop.fs_stat(lazypath) then
 		"clone",
 		"--filter=blob:none",
 		"https://github.com/folke/lazy.nvim.git",
-		"--branch=stable", -- latest stable release
-		lazypath,
+		"--branch=stable",
+		lazypath
 	})
 end
 vim.opt.rtp:prepend(lazypath)
@@ -42,7 +42,7 @@ require("lazy").setup({
 				error_notifier = vim_notify,
 			})
 		end,
-		lazy = false,
+		lazy = false
 	},
 
 	-- `gruvbox` - A goated theme.
@@ -58,7 +58,7 @@ require("lazy").setup({
 		main = "ibl",
 		opts = {
 			char = "┊",
-		},
+		}
 	},
 
 	-- `lsp-zero.nvim` - Configure an IDE-like experience with the least amount
@@ -124,10 +124,10 @@ require("lazy").setup({
 			})
 		end,
 		dependencies = {
-			{ "hrsh7th/cmp-nvim-lsp" },
-			{ "hrsh7th/nvim-cmp" },
-			{ "neovim/nvim-lspconfig" },
-			{ "L3MON4D3/LuaSnip" },
+			"hrsh7th/cmp-nvim-lsp",
+			"hrsh7th/nvim-cmp",
+			"neovim/nvim-lspconfig",
+			"L3MON4D3/LuaSnip",
 		}
 	},
 
@@ -145,7 +145,7 @@ require("lazy").setup({
 				}
 			})
 		end,
-		lazy = false,
+		lazy = false
 	},
 
 	-- `markdown-preview` - Preview Markdown files in a browser.
@@ -153,7 +153,7 @@ require("lazy").setup({
 		"iamcco/markdown-preview.nvim",
 		config = function()
 			vim.fn["mkdp#util#install"]()
-		end,
+		end
 	},
 
 	-- `mason` - LSP, linters, formatters, etc.
@@ -201,16 +201,16 @@ require("lazy").setup({
 			vim.cmd("colorscheme nord")
 		end,
 		lazy = false,
-		priority = 1000,
+		priority = 1000
 	},
 
-	-- `nvim-dap` - Debug Adapter Protocol for Neovim. Required for code debugging,.
+	-- `nvim-dap` - Debug Adapter Protocol for Neovim. Required for code debugging.
 	"mfussenegger/nvim-dap",
 
 	-- `nvim-lint` - Asynchronous linter plugin complimentary to the built-in LSP.
 	"mfussenegger/nvim-lint",
 
-	-- `nvim-tree` - A fast file browser/tree view
+	-- `nvim-tree` - A fast file browser/tree view.
 	{
 		"nvim-tree/nvim-tree.lua",
 		config = function()
@@ -223,7 +223,7 @@ require("lazy").setup({
 			})
 		end,
 		dependencies = {
-			-- `nvim-web-devicons` -  Lua fork of `vim-web-devicons` for Neovim.
+			-- `nvim-web-devicons` -  Lua fork of `vim-devicons` for Neovim.
 			"nvim-tree/nvim-web-devicons",
 		},
 		lazy = false,
@@ -254,17 +254,6 @@ require("lazy").setup({
 						flex = { preview_width = 0.57 },
 						horizontal = {
 							preview_width = 0.57,
-							--size = {
-							--width = "90%",
-							--height = "60%",
-							--},
-						},
-						vertical = {
-							preview_width = 0.57,
-							--size = {
-							--width = "90%",
-							--height = "90%",
-							--},
 						},
 					},
 					layout_strategy = "flex",
@@ -340,5 +329,5 @@ require("lazy").setup({
 				width = 140
 			}
 		}
-	},
+	}
 })
