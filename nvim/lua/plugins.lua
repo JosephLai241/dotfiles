@@ -139,6 +139,7 @@ require("lazy").setup({
 				tabline = {
 					lualine_a = { {
 						"buffers",
+						-- Show the buffer number and filename.
 						mode = 4
 					} },
 					lualine_z = { "tabs" },
@@ -170,6 +171,8 @@ require("lazy").setup({
 		"williamboman/mason-lspconfig.nvim",
 		config = function()
 			require("mason-lspconfig").setup({
+				-- Automatically install the following LSPs if they're not already
+				-- installed.
 				ensure_installed = {
 					"bashls",
 					"cssls",
@@ -236,7 +239,10 @@ require("lazy").setup({
 		"nvim-treesitter/nvim-treesitter",
 		build = ":TSUpdate",
 		dependencies = {
+			-- `nvim-treesitter-context` - Lightweight alternative to `context.vim`.
 			"nvim-treesitter/nvim-treesitter-context",
+			-- `nvim-treesitter-textobjects` - Syntax aware text-objects, select,
+			-- move, swap, and peek support.
 			"nvim-treesitter/nvim-treesitter-textobjects"
 		},
 		lazy = false,
