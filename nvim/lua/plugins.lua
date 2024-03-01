@@ -82,7 +82,9 @@ require("lazy").setup({
 			local lsp_config = require("lspconfig")
 
 			lsp_config.bashls.setup {}
+			lsp_config.cssls.setup {}
 			lsp_config.dockerls.setup {}
+			lsp_config.docker_compose_language_service.setup {}
 			lsp_config.eslint.setup({
 				on_attach = function(client, bufnr)
 					vim.api.nvim_create_autocmd("BufWritePre", {
@@ -91,11 +93,16 @@ require("lazy").setup({
 					})
 				end,
 			})
+			lsp_config.grammarly.setup {}
+			lsp_config.html.setup {}
+			lsp_config.jsonls.setup {}
 			lsp_config.lua_ls.setup {}
+			lsp_config.marksman.setup {}
 			lsp_config.nginx_language_server.setup {}
 			lsp_config.pyright.setup {}
 			lsp_config.ruff_lsp.setup {}
 			lsp_config.rust_analyzer.setup {}
+			lsp_config.taplo.setup {}
 			lsp_config.tsserver.setup {}
 			lsp_config.yamlls.setup {}
 
@@ -155,12 +162,34 @@ require("lazy").setup({
 		config = function()
 			require("mason").setup()
 		end,
-		dependencies = {
-			"williamboman/mason-lspconfig.nvim",
-		},
 		lazy = false
 	},
 
+	-- `mason-lspconfig.nvim` - Bridge `mason.nvim` with `lspconfig` for interoperability.
+	{
+		"williamboman/mason-lspconfig.nvim",
+		config = function()
+			require("mason-lspconfig").setup({
+				ensure_installed = {
+					"bashls",
+					"cssls",
+					"dockerls",
+					"docker_compose_language_service",
+					"eslint",
+					"grammarly",
+					"html",
+					"jsonls",
+					"lua_ls",
+					"marksman",
+					"pyright",
+					"rust_analyzer",
+					"taplo",
+					"tsserver",
+					"yamlls",
+				}
+			})
+		end
+	},
 
 	-- `nerdcommenter` - Quickly comment out code.
 	"preservim/nerdcommenter",
