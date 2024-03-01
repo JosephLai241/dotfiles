@@ -234,14 +234,13 @@ require("lazy").setup({
 	-- `nvim-treesitter` - Code parsing and context.
 	{
 		"nvim-treesitter/nvim-treesitter",
-		config = function()
-			local ts_update = require("nvim-treesitter.install").update({ with_sync = true })
-			ts_update()
-		end,
+		build = ":TSUpdate",
 		dependencies = {
 			"nvim-treesitter/nvim-treesitter-context",
 			"nvim-treesitter/nvim-treesitter-textobjects"
-		}
+		},
+		lazy = false,
+		priority = 10000
 	},
 
 	-- `telescope` - Fuzzy finder.
