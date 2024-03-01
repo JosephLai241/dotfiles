@@ -319,6 +319,9 @@ require("lazy").setup({
 		lazy = false
 	},
 
+	-- `twilight.nvim` - Dim inactive sections of code.
+	"folke/twilight.nvim",
+
 	-- `vim-fugitive` - Git integration for Vim.
 	"tpope/vim-fugitive",
 
