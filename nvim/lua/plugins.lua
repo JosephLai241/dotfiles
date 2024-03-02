@@ -139,7 +139,6 @@ require("lazy").setup({
 					})
 				end,
 			})
-			lsp_config.grammarly.setup {}
 			lsp_config.html.setup {}
 			lsp_config.jsonls.setup {}
 			lsp_config.lua_ls.setup {}
@@ -225,7 +224,6 @@ require("lazy").setup({
 					"dockerls",
 					"docker_compose_language_service",
 					"eslint",
-					"grammarly",
 					"html",
 					"jsonls",
 					"lua_ls",
