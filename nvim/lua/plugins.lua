@@ -194,14 +194,6 @@ require("lazy").setup({
 		lazy = false
 	},
 
-	-- `markdown-preview` - Preview Markdown files in a browser.
-	{
-		"iamcco/markdown-preview.nvim",
-		config = function()
-			vim.fn["mkdp#util#install"]()
-		end
-	},
-
 	-- `mason` - LSP, linters, formatters, etc.
 	{
 		"williamboman/mason.nvim",
@@ -289,6 +281,24 @@ require("lazy").setup({
 		},
 		lazy = false,
 		priority = 10000
+	},
+
+	-- `peek.nvim` - Markdown preview plugin.
+	{
+		"toppair/peek.nvim",
+		build = "deno task --quiet build:fast",
+		config = function()
+			require("peek").setup()
+			vim.api.nvim_create_user_command("PeekOpen", require("peek").open, {})
+			vim.api.nvim_create_user_command("PeekClose", require("peek").close, {})
+		end,
+		event = { "VeryLazy" },
+		keys = {
+			-- `<leader>MO` - Open the Markdown preview in a new `webview` window.
+			{ "<leader>MO", "<cmd>:PeekOpen<CR>" },
+			-- `<leader>MC` - Close the Markdown preview `webview` window.
+			{ "<leader>MC", "<cmd>:PeekClose<CR>" }
+		}
 	},
 
 	-- `telescope` - Fuzzy finder.
