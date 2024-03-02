@@ -283,6 +283,14 @@ require("lazy").setup({
 		priority = 10000
 	},
 
+	-- `obsidian.nvim` - Use Obsidian features from within Neovim.
+	{
+		"epwalsh/obsidian.nvim",
+		ft = "markdown",
+		lazy = true,
+		version = "*"
+	},
+
 	-- `peek.nvim` - Markdown preview plugin.
 	{
 		"toppair/peek.nvim",
