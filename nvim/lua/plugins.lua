@@ -46,7 +46,12 @@ require("lazy").setup({
 	},
 
 	-- `gruvbox` - A goated theme.
-	"ellisonleao/gruvbox.nvim",
+	{
+		"ellisonleao/gruvbox.nvim",
+		--config = function()
+		--vim.cmd("colorscheme gruvbox")
+		--end
+	},
 
 	-- `indent-blankline.nvim` - Add indentation marks.
 	{
@@ -59,6 +64,47 @@ require("lazy").setup({
 		opts = {
 			char = "┊",
 		}
+	},
+
+	-- `kanagawa.nvim` - A goated theme.
+	{
+		"rebelot/kanagawa.nvim",
+		config = function()
+			require("kanagawa").setup({
+				colors = {
+					theme = {
+						all = {
+							ui = {
+								bg_gutter = "none"
+							}
+						}
+					}
+				},
+				overrides = function(colors)
+					local theme = colors.theme
+					return {
+						-- Set more uniform colors for the popup menu.
+						Pmenu = { fg = theme.ui.shade0, bg = theme.ui.bg_p1 },
+						PmenuSel = { fg = "NONE", bg = theme.ui.bg_p2 },
+						PmenuSbar = { bg = theme.ui.bg_m1 },
+						PmenuThumb = { bg = theme.ui.bg_p2 },
+
+						-- Override configurations for `Telescope`.
+						TelescopeTitle = { fg = theme.ui.special, bold = true },
+						TelescopePromptNormal = { bg = theme.ui.bg_p1 },
+						TelescopePromptBorder = { fg = theme.ui.bg_p1, bg = theme.ui.bg_p1 },
+						TelescopeResultsNormal = { fg = theme.ui.fg_dim, bg = theme.ui.bg_m1 },
+						TelescopeResultsBorder = { fg = theme.ui.bg_m1, bg = theme.ui.bg_m1 },
+						TelescopePreviewNormal = { bg = theme.ui.bg_dim },
+						TelescopePreviewBorder = { bg = theme.ui.bg_dim, fg = theme.ui.bg_dim },
+					}
+				end,
+			})
+
+			vim.cmd("colorscheme kanagawa")
+		end,
+		lazy = false,
+		priority = 10000
 	},
 
 	-- `lsp-zero.nvim` - Configure an IDE-like experience with the least amount
@@ -200,11 +246,9 @@ require("lazy").setup({
 	-- `nord` - A goated theme.
 	{
 		"shaunsingh/nord.nvim",
-		config = function()
-			vim.cmd("colorscheme nord")
-		end,
-		lazy = false,
-		priority = 1000
+		--config = function()
+		--vim.cmd("colorscheme nord")
+		--end
 	},
 
 	-- `nvim-dap` - Debug Adapter Protocol for Neovim. Required for code debugging.
