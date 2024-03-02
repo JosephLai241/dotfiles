@@ -258,6 +258,12 @@ require("lazy").setup({
 					}
 				}
 			})
+
+			local nvim_tree_api = require("nvim-tree.api")
+			-- Open a node in the tree in a vertical split.
+			vim.keymap.set("n", "<leader>V", nvim_tree_api.node.open.vertical, {})
+			-- Open a node in the tree in a horizontal split.
+			vim.keymap.set("n", "<leader>S", nvim_tree_api.node.open.horizontal, {})
 		end,
 		dependencies = {
 			-- `nvim-web-devicons` -  Lua fork of `vim-devicons` for Neovim.
