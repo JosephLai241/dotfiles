@@ -3,6 +3,9 @@
 -- `<leader>bdo` - Delete all buffers except for the current one.
 vim.keymap.set("n", "<leader>bdo", "<cmd>%bd|e#|bd#<CR>")
 
+-- `<leader>col` - Run the `:ColorizerToggle` command to toggle color previews.
+vim.keymap.set("n", "<leader>col", "<cmd>ColorizerToggle<CR>")
+
 -- `<leader>F` - Run the `:Format` command to format code.
 vim.keymap.set("n", "<leader>F", "<cmd>Format<CR>")
 
