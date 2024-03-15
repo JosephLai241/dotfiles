@@ -24,10 +24,10 @@ require("lazy").setup({
 
 			format_on_save.setup({
 				formatter_by_ft = {
-					css = formatters.lsp,
-					html = formatters.lsp,
-					javascript = formatters.lsp,
-					json = formatters.lsp,
+					css = formatters.prettierd,
+					html = formatters.prettierd,
+					javascript = formatters.prettierd,
+					json = formatters.prettierd,
 					lua = formatters.lsp,
 					markdown = formatters.prettierd,
 					python = formatters.black,
@@ -35,6 +35,7 @@ require("lazy").setup({
 					scss = formatters.lsp,
 					sh = formatters.shfmt,
 					terraform = formatters.lsp,
+					toml = formatters.lsp,
 					typescript = formatters.prettierd,
 					typescriptreact = formatters.prettierd,
 					yaml = formatters.lsp,
