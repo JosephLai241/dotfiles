@@ -242,6 +242,9 @@ require("lazy").setup({
 		--end
 	},
 
+	-- `nvim-colorizer` - A color preview plugin. So useful for frontend work.
+	"norcalli/nvim-colorizer.lua",
+
 	-- `nvim-dap` - Debug Adapter Protocol for Neovim. Required for code debugging.
 	"mfussenegger/nvim-dap",
 
