@@ -38,10 +38,39 @@ dotfiles/
 │   │   ├── tsserver.lua
 │   │   └── yaml.lua
 │   └── lua
-│       ├── diagnostics.lua
-│       ├── keybindings.lua
-│       ├── plugins.lua
-│       └── vimcommands.lua
+│       ├── config
+│       │   ├── diagnostics.lua
+│       │   ├── keybindings.lua
+│       │   ├── lazy.lua
+│       │   └── vimcommands.lua
+│       └── plugins
+│           ├── coding
+│           │   ├── copilot.lua
+│           │   ├── nvim-dap.lua
+│           │   ├── nvim-lint.lua
+│           │   ├── nvim-treesitter.lua
+│           │   ├── vim-fugitive.lua
+│           │   └── vim-gitgutter.lua
+│           ├── formatting
+│           │   ├── conform.lua
+│           │   ├── indent-blankline.lua
+│           │   ├── nerdcommenter.lua
+│           │   ├── nvim-colorizer.lua
+│           │   ├── peek.lua
+│           │   └── vim-surround.lua
+│           ├── init.lua
+│           ├── productivity
+│           │   └── obsidian.lua
+│           ├── themes
+│           │   ├── gruvbox.lua
+│           │   ├── kanagawa.lua
+│           │   └── nord.lua
+│           └── ui
+│               ├── lualine.lua
+│               ├── nvim-tree.lua
+│               ├── telescope.lua
+│               ├── twilight.lua
+│               └── zen-mode.lua
 ├── tmux
 │   └── .tmux.conf
 ├── vim
