@@ -19,11 +19,29 @@ dotfiles/
 ├── leftwm
 │   └── config.toml
 ├── nvim
-│   ├── init.lua
-│   └── lua
-│       ├── keybindings.lua
-│       ├── plugins.lua
-│       └── vimcommands.lua
+│   ├── init.lua
+│   ├── lsp
+│   │   ├── bashls.lua
+│   │   ├── cssls.lua
+│   │   ├── docker_compose_language_service.lua
+│   │   ├── dockerls.lua
+│   │   ├── eslint.lua
+│   │   ├── html.lua
+│   │   ├── jsonls.lua
+│   │   ├── lua_ls.lua
+│   │   ├── marksman.lua
+│   │   ├── nginx_language_server.lua
+│   │   ├── pyright.lua
+│   │   ├── ruff.lua
+│   │   ├── rust_analyzer.lua
+│   │   ├── taplo.lua
+│   │   ├── tsserver.lua
+│   │   └── yaml.lua
+│   └── lua
+│       ├── diagnostics.lua
+│       ├── keybindings.lua
+│       ├── plugins.lua
+│       └── vimcommands.lua
 ├── tmux
 │   └── .tmux.conf
 ├── vim
