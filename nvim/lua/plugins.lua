@@ -14,6 +14,9 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
+	-- `copilot` - Crazy AI shit.
+	"github/copilot.vim",
+
 	-- `format-on-save` - You can figure out what this one does.
 	{
 		"elentok/format-on-save.nvim",
@@ -108,75 +111,6 @@ require("lazy").setup({
 		priority = 10000
 	},
 
-	-- `lsp-zero.nvim` - Configure an IDE-like experience with the least amount
-	-- of effort.
-	{
-		"VonHeikemen/lsp-zero.nvim",
-		branch = "v3.x",
-		config = function()
-			local lsp_zero = require("lsp-zero")
-
-			lsp_zero.on_attach(function(client, bufnr)
-				lsp_zero.default_keymaps({ buffer = bufnr })
-
-				-- Muscle memory is a bitch, Remapping cycling through diagnostics
-				-- to `[g` and `]g` since that's what CoC used.
-				vim.keymap.set("n", "[g", vim.diagnostic.goto_prev)
-				vim.keymap.set("n", "]g", vim.diagnostic.goto_next)
-			end)
-
-			-- Configure individually installed language servers.
-			local lsp_config = require("lspconfig")
-
-			lsp_config.bashls.setup {}
-			lsp_config.cssls.setup {}
-			lsp_config.dockerls.setup {}
-			lsp_config.docker_compose_language_service.setup {}
-			lsp_config.eslint.setup({
-				on_attach = function(client, bufnr)
-					vim.api.nvim_create_autocmd("BufWritePre", {
-						buffer = bufnr,
-						command = "EslintFixAll",
-					})
-				end,
-			})
-			lsp_config.html.setup {}
-			lsp_config.jsonls.setup {}
-			lsp_config.lua_ls.setup {}
-			lsp_config.marksman.setup {}
-			lsp_config.nginx_language_server.setup {}
-			lsp_config.pyright.setup {}
-			lsp_config.ruff_lsp.setup {}
-			lsp_config.rust_analyzer.setup {}
-			lsp_config.taplo.setup {}
-			lsp_config.tsserver.setup {}
-			lsp_config.yamlls.setup {}
-
-			-- Configure settings for `nvim-cmp`.
-			local cmp = require("cmp")
-
-			cmp.setup({
-				-- Autocomplete dropdown menu settings.
-				completion = {
-					completeopt = "menu,menuone,noinsert"
-				},
-				mapping = cmp.mapping.preset.insert({
-					-- Enable using the Enter key to confirm a selection in addition
-					-- to `<C-y>`.
-					["<CR>"] = cmp.mapping.confirm({ select = false }),
-				}),
-				-- Preselect the first item in the autocomplete dropdown.
-				preselect = "item",
-			})
-		end,
-		dependencies = {
-			"hrsh7th/cmp-nvim-lsp",
-			"hrsh7th/nvim-cmp",
-			"neovim/nvim-lspconfig",
-			"L3MON4D3/LuaSnip",
-		}
-	},
-
 	-- `lualine` - A modern and fast Lua statusline.
 	{
 		"nvim-lualine/lualine.nvim",
@@ -193,42 +127,6 @@ require("lazy").setup({
 			})
 		end,
 		lazy = false
-	},
-
-	-- `mason` - LSP, linters, formatters, etc.
-	{
-		"williamboman/mason.nvim",
-		config = function()
-			require("mason").setup()
-		end,
-		lazy = false
-	},
-
-	-- `mason-lspconfig.nvim` - Bridge `mason.nvim` with `lspconfig` for interoperability.
-	{
-		"williamboman/mason-lspconfig.nvim",
-		config = function()
-			require("mason-lspconfig").setup({
-				-- Automatically install the following LSPs if they're not already
-				-- installed.
-				ensure_installed = {
-					"bashls",
-					"cssls",
-					"dockerls",
-					"docker_compose_language_service",
-					"eslint",
-					"html",
-					"jsonls",
-					"lua_ls",
-					"marksman",
-					"pyright",
-					"rust_analyzer",
-					"taplo",
-					"tsserver",
-					"yamlls",
-				}
-			})
-		end
 	},
 
 	-- `nerdcommenter` - Quickly comment out code.
@@ -302,8 +200,9 @@ require("lazy").setup({
 	-- `obsidian.nvim` - Use Obsidian features from within Neovim.
 	{
 		"epwalsh/obsidian.nvim",
+		event = { "VeryLazy" },
 		ft = "markdown",
-		lazy = true,
+		--lazy = true,
 		version = "*"
 	},
 

@@ -25,7 +25,7 @@ vim.opt.ignorecase = true
 -- Display matches for a search pattern while you type.
 vim.opt.incsearch = true
 -- Disable the mouse.
-vim.opt.mouse = nil
+vim.opt.mouse = ""
 -- Display line numbers.
 vim.opt.number = true
 -- Display relative line numbers.
