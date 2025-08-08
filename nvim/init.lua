@@ -1,13 +1,13 @@
 -- Neovim config
 
 -- Load all Vim command settings.
-require("vimcommands")
+require("config.vimcommands")
 
 -- Load all Neovim diagnostics settings.
-require("diagnostics")
+require("config.diagnostics")
 
 -- Load all custom keybindings.
-local keybindings = require("keybindings")
+local keybindings = require("config.keybindings")
 -- Then call the `setup_lsp_keymaps()`function to override default keybindings.
 vim.api.nvim_create_autocmd("LspAttach", {
 	callback = function(ev)
@@ -44,4 +44,4 @@ vim.api.nvim_create_autocmd("LspAttach", {
 })
 
 -- Load all plugins.
-require("plugins")
+require("config.lazy")
