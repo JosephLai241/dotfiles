@@ -20,23 +20,6 @@ dotfiles/
 │   └── config.toml
 ├── nvim
 │   ├── init.lua
-│   ├── lsp
-│   │   ├── bashls.lua
-│   │   ├── cssls.lua
-│   │   ├── docker_compose_language_service.lua
-│   │   ├── dockerls.lua
-│   │   ├── eslint.lua
-│   │   ├── html.lua
-│   │   ├── jsonls.lua
-│   │   ├── lua_ls.lua
-│   │   ├── marksman.lua
-│   │   ├── nginx_language_server.lua
-│   │   ├── pyright.lua
-│   │   ├── ruff.lua
-│   │   ├── rust_analyzer.lua
-│   │   ├── taplo.lua
-│   │   ├── tsserver.lua
-│   │   └── yaml.lua
 │   └── lua
 │       ├── config
 │       │   ├── diagnostics.lua
@@ -45,9 +28,11 @@ dotfiles/
 │       │   └── vimcommands.lua
 │       └── plugins
 │           ├── coding
+│           │   ├── blink.lua
 │           │   ├── copilot.lua
 │           │   ├── nvim-dap.lua
 │           │   ├── nvim-lint.lua
+│           │   ├── nvim-lspconfig.lua
 │           │   ├── nvim-treesitter.lua
 │           │   ├── vim-fugitive.lua
 │           │   └── vim-gitgutter.lua
