@@ -18,18 +18,10 @@ vim.keymap.set("n", "<leader>T", "<cmd>NvimTreeToggle<CR>")
 -- `<leader>Z` - Run the `:ZenMode` command to toggle ZenMode.
 vim.keymap.set("n", "<leader>Z", "<cmd>ZenMode<CR>")
 
-
-local M = {}
-
--- This function sets up keybindings for Neovim's LSP.
-function M.setup_lsp_keymaps(bufnr)
-	local opts = { buffer = bufnr }
-	vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
-	vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
-	vim.keymap.set("n", "gi", vim.lsp.buf.implementation, opts)
-	vim.keymap.set("n", "[g", vim.diagnostic.goto_prev, opts)
-	vim.keymap.set("n", "]g", vim.diagnostic.goto_next, opts)
-	vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
-end
-
-return M
+-- Override default keybindings for LSP functionality.
+vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
+vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
+vim.keymap.set("n", "gi", vim.lsp.buf.implementation, opts)
+vim.keymap.set("n", "[g", vim.diagnostic.goto_prev, opts)
+vim.keymap.set("n", "]g", vim.diagnostic.goto_next, opts)
+vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
