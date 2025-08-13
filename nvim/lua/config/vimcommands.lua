@@ -14,8 +14,8 @@ vim.opt.colorcolumn = "80"
 --   noinsert - do not insert any text for a match until the user selects a match from the menu
 --   noselect - do not select a match in the menu; force the user to select one
 vim.opt.completeopt = "menuone,noinsert,noselect"
--- Set the Nerd Font.
--- vim.opt.setguifont = "Hack Regular Nerd Font Complete 11"
+-- Enable highlighting of the current line.
+vim.opt.cursorline = true
 -- Keep the last 1000 commands and search patterns in the history.
 vim.opt.history = 1000
 -- Highlight matches with the last used search pattern.
