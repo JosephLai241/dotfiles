@@ -2,13 +2,21 @@
 return {
 	"stevearc/conform.nvim",
 	opts = {
+		formatters = {
+			injected = { options = { ignore_errors = true } },
+			sqlfluff = {
+				command = "sqlfluff",
+				args = { "format", "--dialect", "sqlite", "--disable-progress-bar", "-n", "-" },
+			},
+		},
 		formatters_by_ft = {
+			-- enables formatting of embedded code blocks
+			["*"] = { "injected" },
 			lua = { "stylua" },
-			-- Conform will run multiple formatters sequentially
+			markdown = { "mdformat" },
 			python = { "isort", "black" },
-			-- You can customize some of the format options for the filetype (:help conform.format)
 			rust = { "rustfmt", lsp_format = "fallback" },
-			-- Conform will run the first available formatter
+			sql = { "sqlfluff" },
 			javascript = { "prettierd", "prettier", stop_after_first = true },
 		},
 		format_on_save = {
