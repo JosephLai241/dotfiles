@@ -127,18 +127,18 @@ source $ZSH/oh-my-zsh.sh
 
 ## Command line aliases
 # Use `lsd` instead of `ls`.
-alias ls="/opt/homebrew/bin/lsd"
+#alias ls="/opt/homebrew/bin/lsd"
 # Use `bat` instead of the outdated `cat`.
-alias cat="/opt/homebrew/bin/bat"
+#alias cat="/opt/homebrew/bin/bat"
 # Use `rg` (ripgrep) instead of `grep`.
-alias grep="/opt/homebrew/bin/rg"
+#alias grep="/opt/homebrew/bin/rg"
 # Use `fd` instead of `find`.
-alias find="/opt/homebrew/bin/fd"
+#alias find="/opt/homebrew/bin/fd"
 # Use `nvim` instead of `vim`.
-alias vim="/opt/homebrew/bin/nvim"
+#alias vim="/opt/homebrew/bin/nvim"
 # Use `btm` instead of `top`/`htop`.
-alias top="btm"
-alias htop="btm"
+#alias top="btm"
+#alias htop="btm"
 
 ## Tmux aliases
 # Make a quick dev session.
