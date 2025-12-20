@@ -14,20 +14,20 @@ sudo apt-get update && sudo apt-get install ripgrep fd-find bat
 
 # Download Neovim.
 echo "Downloading Neovim..."
-curl -L "$NEOVIM_DOWNLOAD_URL" -o "/tmp"
+curl -L "$NEOVIM_DOWNLOAD_URL" -o /tmp
 
 # Extract the tarball.
 echo "Extracting tarball..."
 sudo mkdir -p "$INSTALL_DIR"
-sudo tar -C "$INSTALL_DIR" --strip-components=1 -xzf "/tmp/${NEOVIM_TARBALL}"
+sudo tar -C "$INSTALL_DIR" --strip-components=1 -xzf /tmp/${NEOVIM_TARBALL}
 
 # Create a symlink to the binary.
 echo "Creating symlink at ${BIN_SYMLINK}..."
-sudo ln -sf "${INSTALL_DIR}/bin/nvim" "$BIN_SYMLINK"
+sudo ln -sf ${INSTALL_DIR}/bin/nvim $BIN_SYMLINK
 
 # Clean up the /tmp directory.
 echo "Cleaning up the /tmp directory..."
-rm "/tmp/${NEOVIM_TARBALL}"
+rm /tmp/${NEOVIM_TARBALL}
 
 # Verify Neovim installation.
 echo "Verifying installation..."
