@@ -161,10 +161,10 @@ alias tmls="tmux ls"
 #export /usr/local/go/bin
 
 # Unfortunately add Ruby for GitHub Pages development
-export SDKROOT=$(xcrun --show-sdk-path)
-export PATH="/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/3.0.0/bin:$PATH"
-export PATH="$HOME/.gem/ruby/2.6.0/bin:$PATH"
-eval "$(rbenv init - zsh)"
+#export SDKROOT=$(xcrun --show-sdk-path)
+#export PATH="/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/3.0.0/bin:$PATH"
+#export PATH="$HOME/.gem/ruby/2.6.0/bin:$PATH"
+#eval "$(rbenv init - zsh)"
 
 export PATH="$HOME/.poetry/bin:$PATH"
 export PATH="/Users/josephlai/.local/bin:$PATH"
@@ -172,7 +172,7 @@ export PATH="/Users/josephlai/.local/bin:$PATH"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Linking libraries installed by Homebrew.
-export LIBRARY_PATH="$LIBRARY_PATH:$(brew --prefix)/lib"
+#export LIBRARY_PATH="$LIBRARY_PATH:$(brew --prefix)/lib"
 
 # Adding globally installed Yarn packages to the $PATH.
 export PATH="/Users/josephlai/.yarn/bin:$PATH"
