@@ -62,7 +62,8 @@ dotfiles/
 ├── setup_scripts
 │   ├── setup_nvim.sh
 │   ├── setup_python.sh
-│   └── setup_tmux.sh
+│   ├── setup_tmux.sh
+│   └── setup_zsh.sh
 ├── tmux
 ├── vim
 └── zsh
