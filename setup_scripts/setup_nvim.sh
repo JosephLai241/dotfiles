@@ -10,7 +10,7 @@ echo "=== Setting up Neovim ==="
 
 # Update system and install ripgrep and fd.
 echo "Installing ripgrep and fd..."
-sudo apt-get update && sudo apt-get install ripgrep fd-find
+sudo apt-get update && sudo apt-get install ripgrep fd-find bat
 
 # Download Neovim.
 echo "Downloading Neovim..."
