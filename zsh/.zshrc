@@ -147,8 +147,8 @@ alias dev="tmux new -s dev"
 alias tmls="tmux ls"
 
 ## Python aliases
-alias python="/usr/local/bin/python3"
-alias pip="/usr/local/bin/pip3"
+#alias python="/usr/local/bin/python3"
+#alias pip="/usr/local/bin/pip3"
 
 ######
 # PATH
