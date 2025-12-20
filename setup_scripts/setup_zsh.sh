@@ -22,6 +22,4 @@ curl -L https://raw.githubusercontent.com/sbugzu/gruvbox-zsh/master/gruvbox.zsh-
 echo "=== Copying .zshrc to the home directory..."
 cp ../zsh/.zshrc $HOME
 
-source $HOME/.zshrc
-
 echo "=== Finished running setup script for Zsh ==="
