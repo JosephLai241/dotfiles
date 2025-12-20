@@ -8,13 +8,13 @@ INSTALL_DIR="/opt/neovim"
 
 echo "=== Setting up Neovim ==="
 
-# Update system and install ripgrep and fd.
-echo "Installing ripgrep and fd..."
+# Update system and install ripgrep, fd, and bat.
+echo "Installing ripgrep, fd, and bat..."
 sudo apt-get update && sudo apt-get install ripgrep fd-find bat
 
 # Download Neovim.
 echo "Downloading Neovim..."
-curl -L "$NEOVIM_DOWNLOAD_URL" -o /tmp
+curl -L "$NEOVIM_DOWNLOAD_URL" -o /tmp/${NEOVIM_TARBALL}
 
 # Extract the tarball.
 echo "Extracting tarball..."
@@ -36,6 +36,6 @@ nvim --version | head -n 1
 
 # Copy Neovim Lua configuration files to the ~/.config directory.
 echo "Copying Lua configuration files to ~/.config directory..."
-cp -R ../nvim/ $HOME/.config/nvim/
+cp -R ../nvim/ $HOME/.config/
 
 echo "=== Finished running setup script for Neovim ==="
