@@ -22,4 +22,8 @@ curl -L https://raw.githubusercontent.com/sbugzu/gruvbox-zsh/master/gruvbox.zsh-
 echo "=== Copying .zshrc to the home directory..."
 cp ../zsh/.zshrc $HOME
 
+# Set the default shell to Zsh.
+echo "=== Setting the default shell to Zsh..."
+chsh -s /usr/bin/zsh
+
 echo "=== Finished running setup script for Zsh ==="
