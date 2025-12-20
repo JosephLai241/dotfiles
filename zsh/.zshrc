@@ -127,18 +127,18 @@ source $ZSH/oh-my-zsh.sh
 
 ## Command line aliases
 # Use `lsd` instead of `ls`.
-alias ls="/opt/homebrew/bin/lsd"
+#alias ls="/opt/homebrew/bin/lsd"
 # Use `bat` instead of the outdated `cat`.
-alias cat="/opt/homebrew/bin/bat"
+#alias cat="/opt/homebrew/bin/bat"
 # Use `rg` (ripgrep) instead of `grep`.
-alias grep="/opt/homebrew/bin/rg"
+#alias grep="/opt/homebrew/bin/rg"
 # Use `fd` instead of `find`.
-alias find="/opt/homebrew/bin/fd"
+#alias find="/opt/homebrew/bin/fd"
 # Use `nvim` instead of `vim`.
-alias vim="/opt/homebrew/bin/nvim"
+#alias vim="/opt/homebrew/bin/nvim"
 # Use `btm` instead of `top`/`htop`.
-alias top="btm"
-alias htop="btm"
+#alias top="btm"
+#alias htop="btm"
 
 ## Tmux aliases
 # Make a quick dev session.
@@ -147,8 +147,8 @@ alias dev="tmux new -s dev"
 alias tmls="tmux ls"
 
 ## Python aliases
-alias python="/usr/local/bin/python3"
-alias pip="/usr/local/bin/pip3"
+#alias python="/usr/local/bin/python3"
+#alias pip="/usr/local/bin/pip3"
 
 ######
 # PATH
@@ -161,10 +161,10 @@ alias pip="/usr/local/bin/pip3"
 #export /usr/local/go/bin
 
 # Unfortunately add Ruby for GitHub Pages development
-export SDKROOT=$(xcrun --show-sdk-path)
-export PATH="/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/3.0.0/bin:$PATH"
-export PATH="$HOME/.gem/ruby/2.6.0/bin:$PATH"
-eval "$(rbenv init - zsh)"
+#export SDKROOT=$(xcrun --show-sdk-path)
+#export PATH="/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/3.0.0/bin:$PATH"
+#export PATH="$HOME/.gem/ruby/2.6.0/bin:$PATH"
+#eval "$(rbenv init - zsh)"
 
 export PATH="$HOME/.poetry/bin:$PATH"
 export PATH="/Users/josephlai/.local/bin:$PATH"
@@ -172,7 +172,7 @@ export PATH="/Users/josephlai/.local/bin:$PATH"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Linking libraries installed by Homebrew.
-export LIBRARY_PATH="$LIBRARY_PATH:$(brew --prefix)/lib"
+#export LIBRARY_PATH="$LIBRARY_PATH:$(brew --prefix)/lib"
 
 # Adding globally installed Yarn packages to the $PATH.
 export PATH="/Users/josephlai/.yarn/bin:$PATH"

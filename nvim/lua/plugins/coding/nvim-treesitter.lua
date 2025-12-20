@@ -22,4 +22,5 @@ return {
 	},
 	lazy = false,
 	priority = 10000,
+	tag = "v0.10.0",
 }

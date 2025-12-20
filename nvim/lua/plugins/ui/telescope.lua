@@ -1,6 +1,6 @@
 return {
 	"nvim-telescope/telescope.nvim",
-	tag = "0.1.5",
+	tag = "v0.2.0",
 	config = function()
 		require("telescope").setup({
 			defaults = {
@@ -26,16 +26,18 @@ return {
 									vim.api.nvim_chan_send(term, d .. "\r\n")
 								end
 							end
-							vim.fn.jobstart(
-								{
-									"catimg", filepath -- Terminal image viewer command
-								},
-								{ on_stdout = send_output, stdout_buffered = true, pty = true })
+							vim.fn.jobstart({
+								"catimg",
+								filepath, -- Terminal image viewer command
+							}, { on_stdout = send_output, stdout_buffered = true, pty = true })
 						else
-							require("telescope.previewers.utils").set_preview_message(bufnr, opts.winid,
-								"Binary cannot be previewed")
+							require("telescope.previewers.utils").set_preview_message(
+								bufnr,
+								opts.winid,
+								"Binary cannot be previewed"
+							)
 						end
-					end
+					end,
 				},
 			},
 		})
@@ -56,5 +58,5 @@ return {
 		vim.keymap.set("n", "<leader>gs", builtin.git_status, {})
 	end,
 	dependencies = { "nvim-lua/plenary.nvim" },
-	lazy = false
+	lazy = false,
 }
