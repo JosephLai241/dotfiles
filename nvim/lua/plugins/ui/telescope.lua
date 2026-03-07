@@ -50,6 +50,9 @@ return {
 		vim.keymap.set("n", "<leader>fb", builtin.buffers, {})
 		vim.keymap.set("n", "<leader>fh", builtin.help_tags, {})
 
+		-- LSP references override.
+		vim.keymap.set("n", "gr", builtin.lsp_references, {})
+
 		-- Git pickers.
 		vim.keymap.set("n", "<leader>gf", builtin.git_files, {})
 		vim.keymap.set("n", "<leader>gc", builtin.git_commits, {})
