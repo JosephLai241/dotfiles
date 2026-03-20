@@ -32,12 +32,16 @@ dotfiles/
 │           ├── coding
 │           │   ├── blink.lua
 │           │   ├── copilot.lua
+│           │   ├── gitsigns.lua
+│           │   ├── lazydev.lua
+│           │   ├── mason.lua
 │           │   ├── nvim-dap.lua
+│           │   ├── nvim-dap-ui.lua
 │           │   ├── nvim-lint.lua
 │           │   ├── nvim-lspconfig.lua
 │           │   ├── nvim-treesitter.lua
-│           │   ├── vim-fugitive.lua
-│           │   └── vim-gitgutter.lua
+│           │   ├── tiny-inline-diagonstic.lua
+│           │   └── trouble.lua
 │           ├── formatting
 │           │   ├── conform.lua
 │           │   ├── indent-blankline.lua
