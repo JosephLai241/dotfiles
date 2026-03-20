@@ -13,9 +13,9 @@ return {
 				layout_strategy = "flex",
 				preview = {
 					mime_hook = function(filepath, bufnr, opts)
-						local is_image = function(filepath)
+						local is_image = function(path)
 							local image_extensions = { "png", "jpg" } -- Supported image formats
-							local split_path = vim.split(filepath:lower(), ".", { plain = true })
+							local split_path = vim.split(path:lower(), ".", { plain = true })
 							local extension = split_path[#split_path]
 							return vim.tbl_contains(image_extensions, extension)
 						end
