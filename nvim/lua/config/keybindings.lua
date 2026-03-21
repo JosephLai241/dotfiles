@@ -9,6 +9,9 @@ vim.keymap.set("n", "<leader>col", "<cmd>ColorizerToggle<CR>")
 -- `<leader>L` - Run the `:Lazy` command to bring up the Lazy plugin manager UI.
 vim.keymap.set("n", "<leader>L", "<cmd>Lazy<CR>")
 
+-- `<leader>M` - Run the `:Mason` command to bring up the Mason plugin manager UI.
+vim.keymap.set("n", "<leader>M", "<cmd>Mason<CR>")
+
 -- `<leader>T` - Run the `:NvimTreeToggle` command to toggle the tree view pane.
 vim.keymap.set("n", "<leader>T", "<cmd>NvimTreeToggle<CR>")
 
