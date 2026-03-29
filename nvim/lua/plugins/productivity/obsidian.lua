@@ -1,5 +1,8 @@
 return {
 	"epwalsh/obsidian.nvim",
+	cond = function()
+		return vim.fn.getcwd():find("~/vaults") ~= nil
+	end,
 	dependencies = { "nvim-lua/plenary.nvim" },
 	event = {
 		"BufReadPre " .. vim.fn.expand("~") .. "/vaults/**.md",
