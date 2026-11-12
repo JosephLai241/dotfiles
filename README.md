@@ -17,6 +17,8 @@ dotfiles/
 │   └── alacritty.yml
 ├── fish
 │   └── config.fish
+├── herdr
+│   └── config.toml
 ├── leftwm
 │   └── config.toml
 ├── LICENSE
