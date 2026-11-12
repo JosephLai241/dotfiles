@@ -1,0 +1,17 @@
+onboarding = false
+
+[ui.toast]
+delivery = "herdr"
+
+[theme]
+name = "kanagawa"
+auto_switch = false
+
+[terminal]
+kitty_graphics = true
+
+[keys]
+previous_workspace = "prefix+("
+next_workspace = "prefix+)"
+split_vertical = "prefix+%"
+split_horizontal = 'prefix+"'
